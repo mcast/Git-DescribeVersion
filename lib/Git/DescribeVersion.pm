@@ -324,6 +324,19 @@ though it's probably more useful run from the shell:
 The included C<git-describe-version> script
 wraps L<Git::DescribeVersion::App>.
 
+=head1 MODE OF OPERATION
+
+Currently there is only one intended mode of operation.
+
+=head2 Manual bump
+
+L<Git::DescribeVersion> was designed to append the final (third) part
+onto a partial (two-part) version.
+
+The first two parts are incremented manually.  Automatic increment
+with L<Dist::Zilla::Plugin::Git::Tag> does not work well with this
+mode.
+
 =head1 OPTIONS
 
 These options can be passed to L</new>:
